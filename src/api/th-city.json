@@ -1,0 +1,20 @@
+[
+    {
+        "id":1,
+        "name": "khon kaen",
+        "coord": {
+            "lon":103.120811,
+            "lat":14.60592
+        },
+        "country": "TH"
+    },
+    {
+        "id":2,
+        "name": "Bangkok",
+        "coord": {
+            "lon":103.120811,
+            "lat":14.60592
+        },
+        "country": "TH"
+    }
+]
