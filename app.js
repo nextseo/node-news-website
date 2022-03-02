@@ -19,10 +19,11 @@ app.use(bodyParser.urlencoded({extended:true}))
 
 
 // Routes
-const newsRouter = require('./src/router/news')
+// const newsRouter = require('./src/router/news')
+const indexRouter = require('./src/router/index')
 
-app.use('/', newsRouter)
-app.use('/article', newsRouter)
+ app.use('/', indexRouter)
+// app.use('/article', newsRouter)
 
 
 
