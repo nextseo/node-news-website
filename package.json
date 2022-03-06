@@ -22,13 +22,7 @@
     "axios": "^0.26.0",
     "body-parser": "^1.19.2",
     "ejs": "^3.1.6",
-    "express": "^4.17.3",
-    "express-sitemap": "^1.8.0",
-    "js2xmlparser": "^4.0.2",
-    "moment": "^2.29.1",
-    "sitemap-xml": "^0.1.0",
-    "sitemap-xml-parser": "^0.0.2",
-    "sitemap.xml": "^1.0.0"
+    "express": "^4.17.3"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"

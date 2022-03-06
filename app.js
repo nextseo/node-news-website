@@ -1,29 +1,14 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const path = require("path");
+
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
 //sitemap
-
-// var sitemap = require('sitemap.xml');
-// const test = app.use(sitemap(__dirname + '/sitemap.xml'));
-
-// app.get("/sitemap.xml", (req, res) => {
-//   res.send(test)
-// });
-const fs = require('fs')
-app.get("/sitemap.xml", (req, res) => {
-
-  fs.readFile('./sitemap.xml', 'utf8' , (err, data) => {
-    if (err) {
-      console.error(err)
-      return
-    }
-    console.log(data)
-    res.send(data)
-  })
-
+app.get('/sitemap.xml', function(req, res) {
+  res.sendFile(path.join(__dirname, '', 'sitemap.xml'));
 });
 
 
@@ -44,7 +29,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Routes
-// const newsRouter = require('./src/router/news')
 const indexRouter = require("./src/router/index");
 const weatherRouter = require("./src/router/weather");
 // const sitemapRouter = require("./src/router/sitemap");
