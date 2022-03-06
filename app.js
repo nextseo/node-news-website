@@ -6,14 +6,6 @@ const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-//sitemap
-app.get('/sitemap.xml', function(req, res) {
-  res.sendFile(path.join(__dirname, '', 'sitemap.xml'));
-});
-
-
-
-
 
 // Static File
 app.use(express.static("public"));
@@ -36,6 +28,12 @@ const weatherRouter = require("./src/router/weather");
 app.use("/", indexRouter);
 app.use("/weather", weatherRouter);
 // app.use("/sitemap.xml", sitemapRouter);
+
+//sitemap
+app.get('/sitemap.xml', function(req, res) {
+  // res.sendFile(path.join(__dirname,'src/views', 'sitemap.xml'));
+  res.sendFile('./src/views/sitemap.xml', { root: __dirname });
+});
 
 // Listen
 app.listen(PORT, () => {
