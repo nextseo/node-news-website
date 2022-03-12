@@ -30,12 +30,13 @@ app.use("/weather", weatherRouter);
 // app.use("/sitemap.xml", sitemapRouter);
 
 //sitemap
-app.get('/sitemap.xml', function(req, res) {
-  // res.sendFile(path.join(__dirname,'src/views', 'sitemap.xml'));
-  res.sendFile('./src/views/sitemap.xml', { root: __dirname });
-});
+// app.get('/sitemap.xml', function(req, res) {
+//   // res.sendFile(path.join(__dirname,'src/views', 'sitemap.xml'));
+//   //res.sendFile('./src/views/sitemap.xml', { root: __dirname });
+//   res.send('55555')
+// });
 
 // Listen
 app.listen(PORT, () => {
-  console.log("SERVER RUNNING IS 5000");
+  console.log("SERVER RUNNING IS 5000 ss");
 });
